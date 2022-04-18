@@ -35,7 +35,7 @@ public class RestAssured1 {
 		
 	}
 	
-	//@Test
+	@Test
 	public void secondMethod() {
 		 RestAssured.baseURI = "https://reqres.in/api";
 		 given().queryParam("page", "1")
@@ -46,7 +46,7 @@ public class RestAssured1 {
 		 .body("page", equalTo(1))
 		 .body("data.first_name", hasItems("George","Tracey"));
 	}
-	//@Test
+	@Test
 	public void postReq() {
 		RestAssured.baseURI = "https://reqres.in/api";
 		Map<String, String> body =  new HashMap<String, String>();
